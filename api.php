@@ -13,7 +13,7 @@
 	//如果IP不存在或者为空
 	if((!isset($ip) || ($ip == ''))) {
 		//获取访客IP
-		$ip = $_SERVER["REMOTE_ADDR"];
+		$ip = $_SERVER["HTTP_CLIENT_IP"];
 	}
 	//如果IP格式不对
 	if(!filter_var($ip, FILTER_VALIDATE_IP)) {
